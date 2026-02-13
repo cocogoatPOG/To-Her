@@ -1,36 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>For My Love ❤️</title>
-
-<link rel="stylesheet" href="style.css">
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Background -->
-<div class="background"></div>
+<h1>Click Me 💌</h1>
 
-<!-- Envelope -->
-<img src="images/envelope.jpg" id="envelope" class="envelope">
+<img src="envelope.jpg" id="envelope" class="center">
 
-<!-- Popup -->
-<div id="popup" class="popup">
-    <div class="popup-card">
-        <button id="popup-close">X</button>
-        <div id="popup-body"></div>
-    </div>
+<!-- PHOTO POPUP -->
+<div id="photoPopup" class="popup hidden">
+    <span class="close" onclick="closePhoto()">X</span>
+    <img src="boquet.jpg" class="flower">
+    <img src="mahal.jpeg" class="gfpic">
+</div>
+
+<!-- LOVE MESSAGE -->
+<div id="messagePopup" class="popup hidden">
+    <h2>You mean everything to me ❤️</h2>
+    <p>PUT YOUR LONG MESSAGE HERE</p>
+    <button onclick="openValentine()">Continue</button>
+</div>
+
+<!-- VALENTINE QUESTION -->
+<div id="valPopup" class="popup hidden">
+    <h2>Will you be my Valentine? 💖</h2>
+    <button onclick="valYes()">Yes</button>
+    <button onclick="valNo()">No</button>
+</div>
+
+<!-- ANOTHER CHANCE -->
+<div id="chancePopup" class="popup hidden">
+    <h2>Another Chance? 🥺🐱</h2>
+    <img src="cat.gif" width="150">
+    <button onclick="backToVal()">Another Chance</button>
+</div>
+
+<!-- BOUQUET -->
+<div id="bouquetPopup" class="popup hidden">
+    <img src="boquet.jpg" width="200">
+    <p>I love you so much ❤️</p>
+    <button onclick="openGifts()">Continue</button>
+</div>
+
+<!-- GIFT OPTIONS -->
+<div id="giftPopup" class="popup hidden">
+    <span class="close" onclick="resetAll()">X</span>
+    <h2>Surprise Gift For You 💝</h2>
+
+    <button onclick="openPolaroid()">❤️</button>
+    <button onclick="openSong()">❤️</button>
+    <button onclick="openLetter()">❤️</button>
+</div>
+
+<!-- POLAROID -->
+<div id="polaroidPopup" class="popup hidden">
+    <h2>Favorite Pictures 📸</h2>
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <button onclick="backToGift()">Back</button>
+</div>
+
+<!-- SONG -->
+<div id="songPopup" class="popup hidden">
+    <h2>Song That Reminds Me Of You 🎵</h2>
+    <iframe width="300" height="200"
+    src="https://www.youtube.com/watch?v=uyC8mS5MHkk">
+    </iframe>
+    <button onclick="backToGift()">Back</button>
+</div>
+
+<!-- LETTER -->
+<div id="letterPopup" class="popup hidden">
+    <h2>To My Valentine ❤️</h2>
+    <p>PUT YOUR LONG LOVE LETTER HERE</p>
+    <button onclick="backToGift()">Back</button>
 </div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-
