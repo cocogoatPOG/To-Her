@@ -1,33 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>For You ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<audio id="bgMusic" loop>
-    <source src="IV OF SPADES - Kabisado (Official Lyric Video).mp3" type="audio/mpeg">
-</audio>
-
-<div class="hearts"></div>
-    
-<img src="envelope.jpg" id="envelope" class="envelope">
-
-<div class="vinyl">
-    <img src="album.png" class="album">
-</div>
-
-<h1 class="title clickText">Click Me 💌</h1>
-
 <!-- PHOTO SCREEN -->
- <div id="photoScreen" class="popup photoPopup">   
-     <span class="close" onclick="nextFromPhoto()">X</span>
-     <div class="frameContainer">
+<div id="photoScreen" class="popup photoPopup">
+    <span class="close" onclick="nextFromPhoto()">X</span>
+    <div class="frameContainer">
         <img src="frame.png" class="frame">
         <img src="Mahal.jpeg" class="mainPhoto">
     </div>
@@ -35,23 +9,21 @@
 </div>
 
 <!-- MESSAGE -->
-<div id="messageScreen" class="popup hidden">
+<div id="messageScreen" class="popup">
     <h2 class="title">You Mean So Much To Me ❤️</h2>
-    <p class="text">
-    PUT YOUR LONG MESSAGE HERE
-    </p>
+    <p class="text">PUT YOUR LONG MESSAGE HERE</p>
     <button onclick="toValentine()">Continue</button>
 </div>
 
 <!-- VALENTINE -->
-<div id="valScreen" class="popup hidden">
+<div id="valScreen" class="popup">
     <h2 class="title">Will You Be My Valentine? 💖</h2>
     <button onclick="valYes()">Yes</button>
     <button onclick="valNo()">No</button>
 </div>
 
 <!-- CAT -->
-<div id="catScreen" class="popup hidden">
+<div id="catScreen" class="popup">
     <h2 class="title">Another Chance? 🥺</h2>
     <img src="cat.gif" width="150">
     <br><br>
@@ -59,24 +31,23 @@
 </div>
 
 <!-- FLOWERS -->
-<div id="flowerScreen" class="popup hidden">
+<div id="flowerScreen" class="popup">
     <img src="boquet.jpg" width="200">
     <p class="text">I Love You So Much ❤️</p>
     <button onclick="toGifts()">Continue</button>
 </div>
 
 <!-- GIFTS -->
-<div id="giftScreen" class="popup hidden">
+<div id="giftScreen" class="popup">
     <span class="close" onclick="resetAll()">X</span>
     <h2 class="title">Surprise Gift For You 💝</h2>
-
     <button onclick="openPhotos()">❤️ Photos</button>
     <button onclick="openSong()">❤️ Song</button>
     <button onclick="openLetter()">❤️ Letter</button>
 </div>
 
 <!-- POLAROIDS -->
-<div id="photosScreen" class="popup hidden">
+<div id="photosScreen" class="popup">
     <h2 class="title">Favorite Pictures 📸</h2>
     <div class="photosRow">
         <img src="photo1.jpg" class="polaroid">
@@ -88,23 +59,18 @@
 </div>
 
 <!-- SONG -->
-<div id="songScreen" class="popup hidden">
+<div id="songScreen" class="popup">
     <h2 class="title">Song That Reminds Me Of You 🎵</h2>
     <iframe width="300" height="200"
-    src="https://www.youtube.com/watch?v=uyC8mS5MHkk">
+        src="https://www.youtube.com/watch?v=uyC8mS5MHkk">
     </iframe>
     <br>
     <button onclick="backToGifts()">Back</button>
 </div>
 
 <!-- LETTER -->
-<div id="letterScreen" class="popup hidden">
+<div id="letterScreen" class="popup">
     <h2 class="title">To My Valentine ❤️</h2>
     <p class="text">PUT YOUR LONG LOVE LETTER HERE</p>
     <button onclick="backToGifts()">Back</button>
 </div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
