@@ -4,18 +4,16 @@ window.onload = () => {
 
 document.getElementById("envelope").onclick = () => {
 
-    // Play background music
     const music = document.getElementById("bgMusic");
-    if(music){
-        music.play();
-    }
+    if(music) music.play();
 
-    // Envelope click animation (optional but nice)
     const env = document.getElementById("envelope");
-    env.style.transform = "scale(0.85) rotate(-6deg)";
+    env.classList.add("open");   // uses your CSS animation
 
-    // Show first popup
-    show("photoScreen");
+    setTimeout(() => {
+        hideAll();
+        show("photoScreen");
+    }, 500);
 };
 
 function nextFromPhoto(){
@@ -73,6 +71,7 @@ function resetAll(){
 }
 
 function show(id){
+    hideAll();
     document.getElementById(id).classList.remove("hidden");
 }
 
