@@ -1,84 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>For You ❤️</title>
-    <link rel="stylesheet" href="style.css">
+<title>For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h1>Click Me 💌</h1>
+<audio autoplay loop>
+    <source src="IV OF SPADES - Kabisado (Official Lyric Video).mp3" type="audio/mpeg">
+</audio>
 
-<img src="envelope.jpg" id="envelope" class="center">
+<h1 class="title">Click Me 💌</h1>
 
-<!-- PHOTO POPUP -->
-<div id="photoPopup" class="popup hidden">
-    <span class="close" onclick="closePhoto()">X</span>
-    <img src="boquet.jpg" class="flower">
-    <img src="mahal.jpeg" class="gfpic">
+<img src="envelope.jpg" id="envelope" class="envelope">
+
+<!-- PHOTO SCREEN -->
+<div id="photoScreen" class="popup hidden">
+    <span class="close" onclick="nextFromPhoto()">X</span>
+    <img src="frame.png" class="frame">
+    <img src="photo1.jpg" class="mainPhoto">
 </div>
 
-<!-- LOVE MESSAGE -->
-<div id="messagePopup" class="popup hidden">
-    <h2>You mean everything to me ❤️</h2>
-    <p>PUT YOUR LONG MESSAGE HERE</p>
-    <button onclick="openValentine()">Continue</button>
+<!-- MESSAGE -->
+<div id="messageScreen" class="popup hidden">
+    <h2 class="title">You Mean So Much To Me ❤️</h2>
+    <p class="text">
+    PUT YOUR LONG MESSAGE HERE
+    </p>
+    <button onclick="toValentine()">Continue</button>
 </div>
 
-<!-- VALENTINE QUESTION -->
-<div id="valPopup" class="popup hidden">
-    <h2>Will you be my Valentine? 💖</h2>
+<!-- VALENTINE -->
+<div id="valScreen" class="popup hidden">
+    <h2 class="title">Will You Be My Valentine? 💖</h2>
     <button onclick="valYes()">Yes</button>
     <button onclick="valNo()">No</button>
 </div>
 
-<!-- ANOTHER CHANCE -->
-<div id="chancePopup" class="popup hidden">
-    <h2>Another Chance? 🥺🐱</h2>
+<!-- CAT -->
+<div id="catScreen" class="popup hidden">
+    <h2 class="title">Another Chance? 🥺</h2>
     <img src="cat.gif" width="150">
+    <br><br>
     <button onclick="backToVal()">Another Chance</button>
 </div>
 
-<!-- BOUQUET -->
-<div id="bouquetPopup" class="popup hidden">
-    <img src="boquet.jpg" width="200">
-    <p>I love you so much ❤️</p>
-    <button onclick="openGifts()">Continue</button>
+<!-- FLOWERS -->
+<div id="flowerScreen" class="popup hidden">
+    <img src="bouquet.jpg" width="200">
+    <p class="text">I Love You So Much ❤️</p>
+    <button onclick="toGifts()">Continue</button>
 </div>
 
-<!-- GIFT OPTIONS -->
-<div id="giftPopup" class="popup hidden">
+<!-- GIFTS -->
+<div id="giftScreen" class="popup hidden">
     <span class="close" onclick="resetAll()">X</span>
-    <h2>Surprise Gift For You 💝</h2>
+    <h2 class="title">Surprise Gift For You 💝</h2>
 
-    <button onclick="openPolaroid()">❤️</button>
-    <button onclick="openSong()">❤️</button>
-    <button onclick="openLetter()">❤️</button>
+    <button onclick="openPhotos()">❤️ Photos</button>
+    <button onclick="openSong()">❤️ Song</button>
+    <button onclick="openLetter()">❤️ Letter</button>
 </div>
 
-<!-- POLAROID -->
-<div id="polaroidPopup" class="popup hidden">
-    <h2>Favorite Pictures 📸</h2>
-    <img src="photo1.jpg">
-    <img src="photo2.jpg">
-    <img src="photo3.jpg">
-    <button onclick="backToGift()">Back</button>
+<!-- POLAROIDS -->
+<div id="photosScreen" class="popup hidden">
+    <h2 class="title">Favorite Pictures 📸</h2>
+    <img src="photo1.jpg" class="polaroid">
+    <img src="photo2.jpg" class="polaroid">
+    <img src="photo3.jpg" class="polaroid">
+    <br>
+    <button onclick="backToGifts()">Back</button>
 </div>
 
 <!-- SONG -->
-<div id="songPopup" class="popup hidden">
-    <h2>Song That Reminds Me Of You 🎵</h2>
+<div id="songScreen" class="popup hidden">
+    <h2 class="title">Song That Reminds Me Of You 🎵</h2>
     <iframe width="300" height="200"
     src="https://www.youtube.com/watch?v=uyC8mS5MHkk">
     </iframe>
-    <button onclick="backToGift()">Back</button>
+    <br>
+    <button onclick="backToGifts()">Back</button>
 </div>
 
 <!-- LETTER -->
-<div id="letterPopup" class="popup hidden">
-    <h2>To My Valentine ❤️</h2>
-    <p>PUT YOUR LONG LOVE LETTER HERE</p>
-    <button onclick="backToGift()">Back</button>
+<div id="letterScreen" class="popup hidden">
+    <h2 class="title">To My Valentine ❤️</h2>
+    <p class="text">PUT YOUR LONG LOVE LETTER HERE</p>
+    <button onclick="backToGifts()">Back</button>
 </div>
 
 <script src="script.js"></script>
