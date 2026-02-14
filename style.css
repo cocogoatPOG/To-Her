@@ -30,21 +30,61 @@ body{
     transform:scale(1.05);
 }
 
+/* POPUP STYLING */
 .popup{
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px;          
+    border-radius: 25px;
+    width: 90%;            
+    max-width: 500px;
+    min-height: 500px;
 
-    background:#fff;
-    padding:40px;          
-    border-radius:25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    width:90%;            
-    max-width:500px;
-    min-height:500px;     /* make popups taller */
-    
-    box-shadow:0 0 30px rgba(0,0,0,0.4);
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+/* FRAME + PHOTO CONTAINER */
+.frameContainer{
+    position: relative;
+    width: 100%;
+    max-width: 90%;
+    aspect-ratio: 1 / 1;  /* keeps square */
+}
+
+/* FLORAL FRAME */
+.frameContainer .frame{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;  /* frame on top */
+}
+
+/* MAIN PHOTO */
+.frameContainer .mainPhoto{
+    width: 90%;           /* slightly smaller than frame */
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;    /* fills box proportionally */
+    border-radius: 12px;  /* optional */
+    z-index: 1;           /* behind frame */
+}
+
+/* CONTINUE BUTTON SPACING */
+.popup button{
+    margin-top: 20px;
 }
 
 .hidden{
