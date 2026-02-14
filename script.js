@@ -72,15 +72,17 @@ function resetAll(){
 
 function show(id){
     hideAll();
-    document.getElementById(id).classList.remove("hidden");
+    document.getElementById(id).classList.add("active");
 }
 
 function hide(id){
-    document.getElementById(id).classList.add("hidden");
+    document.getElementById(id).classList.remove("active");
 }
 
 function hideAll(){
-    document.querySelectorAll(".popup").forEach(p=>p.classList.add("hidden"));
+    document.querySelectorAll(".popup").forEach(p=>{
+        p.classList.remove("active");
+    });
 }
 
 /* FLOATING HEARTS SPAWNER */
