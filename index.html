@@ -1,5 +1,5 @@
 <!-- PHOTO SCREEN -->
-<div id="photoScreen" class="popup photoPopup">
+<div id="photoScreen" class="popup photoPopup hidden">
     <span class="close" onclick="nextFromPhoto()">X</span>
     <div class="frameContainer">
         <img src="frame.png" class="frame">
@@ -9,21 +9,21 @@
 </div>
 
 <!-- MESSAGE -->
-<div id="messageScreen" class="popup">
+<div id="messageScreen" class="popup hidden">
     <h2 class="title">You Mean So Much To Me ❤️</h2>
     <p class="text">PUT YOUR LONG MESSAGE HERE</p>
     <button onclick="toValentine()">Continue</button>
 </div>
 
 <!-- VALENTINE -->
-<div id="valScreen" class="popup">
+<div id="valScreen" class="popup hidden">
     <h2 class="title">Will You Be My Valentine? 💖</h2>
     <button onclick="valYes()">Yes</button>
     <button onclick="valNo()">No</button>
 </div>
 
 <!-- CAT -->
-<div id="catScreen" class="popup">
+<div id="catScreen" class="popup hidden">
     <h2 class="title">Another Chance? 🥺</h2>
     <img src="cat.gif" width="150">
     <br><br>
@@ -31,14 +31,14 @@
 </div>
 
 <!-- FLOWERS -->
-<div id="flowerScreen" class="popup">
+<div id="flowerScreen" class="popup hidden">
     <img src="boquet.jpg" width="200">
     <p class="text">I Love You So Much ❤️</p>
     <button onclick="toGifts()">Continue</button>
 </div>
 
 <!-- GIFTS -->
-<div id="giftScreen" class="popup">
+<div id="giftScreen" class="popup hidden">
     <span class="close" onclick="resetAll()">X</span>
     <h2 class="title">Surprise Gift For You 💝</h2>
     <button onclick="openPhotos()">❤️ Photos</button>
@@ -47,7 +47,7 @@
 </div>
 
 <!-- POLAROIDS -->
-<div id="photosScreen" class="popup">
+<div id="photosScreen" class="popup hidden">
     <h2 class="title">Favorite Pictures 📸</h2>
     <div class="photosRow">
         <img src="photo1.jpg" class="polaroid">
@@ -59,17 +59,17 @@
 </div>
 
 <!-- SONG -->
-<div id="songScreen" class="popup">
+<div id="songScreen" class="popup hidden">
     <h2 class="title">Song That Reminds Me Of You 🎵</h2>
     <iframe width="300" height="200"
-        src="https://www.youtube.com/watch?v=uyC8mS5MHkk">
+        src="https://www.youtube.com/embed/uyC8mS5MHkk">
     </iframe>
     <br>
     <button onclick="backToGifts()">Back</button>
 </div>
 
 <!-- LETTER -->
-<div id="letterScreen" class="popup">
+<div id="letterScreen" class="popup hidden">
     <h2 class="title">To My Valentine ❤️</h2>
     <p class="text">PUT YOUR LONG LOVE LETTER HERE</p>
     <button onclick="backToGifts()">Back</button>
