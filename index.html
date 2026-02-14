@@ -26,10 +26,14 @@
 
 <!-- PHOTO SCREEN -->
 <div id="photoScreen" class="popup hidden">
-<span class="close" onclick="nextFromPhoto()">X</span>
-<img src="frame.png" class="frame">
-<img src="Mahal.jpeg" class="mainPhoto">
+    <span class="close" onclick="nextFromPhoto()">X</span>
+    <div class="frameContainer">
+        <img src="frame.png" class="frame">
+        <img src="Mahal.jpeg" class="mainPhoto">
+    </div>
+    <button onclick="nextFromPhoto()">Continue</button>
 </div>
+
 
 <!-- MESSAGE -->
 <div id="messageScreen" class="popup hidden">
