@@ -1,95 +1,94 @@
-function hideAll() {
-    document.querySelectorAll(".popup").forEach(p => p.classList.remove("show"));
+document.getElementById("envelope").onclick = () => {
+
+// Play background music
+const music = document.getElementById("bgMusic");
+if(music){
+music.play();
 }
 
-/* START FLOW */
-function startFlow() {
-    hideAll();
-    document.getElementById("photoScreen").classList.add("show");
+// Envelope click animation
+const env = document.getElementById("envelope");
+env.style.transform = "scale(0.85) rotate(-6deg)";
+
+// Show first popup
+show("photoScreen");
+};
+
+function nextFromPhoto(){
+hide("photoScreen");
+show("messageScreen");
 }
 
-/* PHOTO -> MESSAGE */
-function nextFromPhoto() {
-    hideAll();
-    document.getElementById("messageScreen").classList.add("show");
-
-    startMusic();
-    startHearts();
+function toValentine(){
+hide("messageScreen");
+show("valScreen");
 }
 
-/* MESSAGE -> VAL */
-function toValentine() {
-    hideAll();
-    document.getElementById("valScreen").classList.add("show");
+function valNo(){
+hide("valScreen");
+show("catScreen");
 }
 
-/* YES PATH */
-function valYes() {
-    hideAll();
-    document.getElementById("flowerScreen").classList.add("show");
+function backToVal(){
+hide("catScreen");
+show("valScreen");
 }
 
-function toGifts() {
-    hideAll();
-    document.getElementById("giftScreen").classList.add("show");
+function valYes(){
+hide("valScreen");
+show("flowerScreen");
 }
 
-/* NO PATH */
-function valNo() {
-    hideAll();
-    document.getElementById("catScreen").classList.add("show");
+function toGifts(){
+hide("flowerScreen");
+show("giftScreen");
 }
 
-function backToVal() {
-    hideAll();
-    document.getElementById("valScreen").classList.add("show");
+function openPhotos(){
+hide("giftScreen");
+show("photosScreen");
 }
 
-/* GIFTS NAV */
-function openPhotos() {
-    hideAll();
-    document.getElementById("photosScreen").classList.add("show");
+function openSong(){
+hide("giftScreen");
+show("songScreen");
 }
 
-function openSong() {
-    hideAll();
-    document.getElementById("songScreen").classList.add("show");
+function openLetter(){
+hide("giftScreen");
+show("letterScreen");
 }
 
-function openLetter() {
-    hideAll();
-    document.getElementById("letterScreen").classList.add("show");
+function backToGifts(){
+hideAll();
+show("giftScreen");
 }
 
-function backToGifts() {
-    hideAll();
-    document.getElementById("giftScreen").classList.add("show");
+function resetAll(){
+hideAll();
 }
 
-/* RESET */
-function resetAll() {
-    hideAll();
+function show(id){
+document.getElementById(id).classList.remove("hidden");
 }
 
-/* MUSIC */
-function startMusic() {
-    let music = document.getElementById("bgMusic");
-    if (music) music.play().catch(() => {});
+function hide(id){
+document.getElementById(id).classList.add("hidden");
 }
 
-/* HEART PARTICLES */
-function startHearts() {
-    if (window.heartsStarted) return;
-    window.heartsStarted = true;
-
-    setInterval(() => {
-        let heart = document.createElement("div");
-        heart.className = "heart";
-        heart.innerHTML = "💚";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = (15 + Math.random() * 25) + "px";
-        document.body.appendChild(heart);
-
-        setTimeout(() => heart.remove(), 6000);
-    }, 500);
+function hideAll(){
+document.querySelectorAll(".popup")
+.forEach(p => p.classList.add("hidden"));
 }
+
+/* FLOATING HEARTS SPAWNER */
+setInterval(()=>{
+const heart = document.createElement("span");
+heart.innerHTML = "💚";
+heart.style.left = Math.random()*100 + "vw";
+heart.style.animationDuration = (Math.random()*3+3) + "s";
+
+document.querySelector(".hearts").appendChild(heart);
+
+setTimeout(()=> heart.remove(),6000);
+},500);
