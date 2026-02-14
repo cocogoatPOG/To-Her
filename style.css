@@ -37,12 +37,13 @@ body{
     transform:translate(-50%,-50%);
 
     background:#fff;
-    padding:40px;          /* BIGGER INSIDE SPACE */
+    padding:40px;          
     border-radius:25px;
 
-    width:90%;             /* Takes most of screen */
-    max-width:500px;       /* Stops it being too huge */
-
+    width:90%;            
+    max-width:500px;
+    min-height:500px;     /* make popups taller */
+    
     box-shadow:0 0 30px rgba(0,0,0,0.4);
 }
 
