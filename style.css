@@ -1,6 +1,14 @@
 /* =======================
    GENERAL STYLING
 ======================= */
+.popup {
+    display: none !important;
+}
+
+.popup.active {
+    display: block !important;
+}
+
 body{
     margin:0;
     font-family:'Poppins', sans-serif;
