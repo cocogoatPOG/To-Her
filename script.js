@@ -1,3 +1,7 @@
+window.onload = () => {
+    hideAll();
+};
+
 document.getElementById("envelope").onclick = () => {
 
     // Play background music
