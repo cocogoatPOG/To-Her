@@ -145,20 +145,28 @@ animation: envelopeOpen 0.6s ease forwards;
 
 .frameContainer{
     position: relative;
-    width: 250px;   /* same as frame */
-    margin: 0 auto; /* center on screen */
+    width: 100%;
+    max-width: 90%;
+    aspect-ratio: 1 / 1;  /* keeps container square */
 }
 
 .frameContainer .frame{
-    width: 250px;
-    display:block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;           /* frame on top */
 }
 
 .frameContainer .mainPhoto{
-    width: 200px;
+    width: 90%;           /* slightly smaller than frame */
+    height: 90%;          /* slightly smaller than frame */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 15px; /* optional, rounded corners */
+    object-fit: cover;    /* fills its box proportionally */
+    border-radius: 12px;  /* optional rounded corners */
+    z-index: 1;           /* behind the frame */
 }
