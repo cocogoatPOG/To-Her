@@ -1,4 +1,18 @@
-document.getElementById("envelope").onclick = () => show("photoScreen");
+document.getElementById("envelope").onclick = () => {
+
+    // Play background music
+    const music = document.getElementById("bgMusic");
+    if(music){
+        music.play();
+    }
+
+    // Envelope click animation (optional but nice)
+    const env = document.getElementById("envelope");
+    env.style.transform = "scale(0.85) rotate(-6deg)";
+
+    // Show first popup
+    show("photoScreen");
+};
 
 function nextFromPhoto(){
     hide("photoScreen");
