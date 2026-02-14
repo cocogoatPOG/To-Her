@@ -86,9 +86,8 @@ button{
 /* FRAME + PHOTO */
 .frameContainer{
     position: relative;
-    width: 100%;
-    max-width: 90%;
-    aspect-ratio: 1 / 1; /* keeps square */
+    width: 260px;
+    height: 260px;
 }
 
 .frameContainer .frame{
@@ -97,23 +96,19 @@ button{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;  /* frame on top */
+    z-index: 2;
 }
 
 .frameContainer .mainPhoto{
-    width: 90%;           /* slightly smaller than frame */
-    height: 90%;
+    width: 82%;
+    height: 82%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    object-fit: cover;    /* fills box proportionally */
-    border-radius: 12px;  /* optional */
-    z-index: 1;           /* behind frame */
-}
-
-.photoPopup button{
-    margin-top: 20px;
+    object-fit: cover;
+    border-radius: 12px;
+    z-index: 1;
 }
 
 /* =======================
