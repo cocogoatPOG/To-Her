@@ -65,3 +65,18 @@ function hide(id){
 function hideAll(){
     document.querySelectorAll(".popup").forEach(p=>p.classList.add("hidden"));
 }
+
+/* FLOATING HEARTS SPAWNER */
+
+setInterval(()=>{
+    const heart = document.createElement("span");
+    heart.innerHTML = "💚";
+
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = (Math.random()*3+3) + "s";
+
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(()=> heart.remove(),6000);
+
+},500);
