@@ -138,3 +138,23 @@ to{ transform:rotate(360deg); }
 .envelope.open{
 animation: envelopeOpen 0.6s ease forwards;
 }
+
+.frameContainer{
+    position: relative;
+    width: 250px;   /* same as frame */
+    margin: 0 auto; /* center on screen */
+}
+
+.frameContainer .frame{
+    width: 250px;
+    display:block;
+}
+
+.frameContainer .mainPhoto{
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px; /* optional, rounded corners */
+}
