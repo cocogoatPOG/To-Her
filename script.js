@@ -1,57 +1,53 @@
-let envelope = document.getElementById("envelope");
+document.getElementById("envelope").onclick = () => show("photoScreen");
 
-envelope.onclick = () => {
-    show("photoPopup");
+function nextFromPhoto(){
+    hide("photoScreen");
+    show("messageScreen");
 }
 
-function closePhoto(){
-    hide("photoPopup");
-    show("messagePopup");
-}
-
-function openValentine(){
-    hide("messagePopup");
-    show("valPopup");
+function toValentine(){
+    hide("messageScreen");
+    show("valScreen");
 }
 
 function valNo(){
-    hide("valPopup");
-    show("chancePopup");
+    hide("valScreen");
+    show("catScreen");
 }
 
 function backToVal(){
-    hide("chancePopup");
-    show("valPopup");
+    hide("catScreen");
+    show("valScreen");
 }
 
 function valYes(){
-    hide("valPopup");
-    show("bouquetPopup");
+    hide("valScreen");
+    show("flowerScreen");
 }
 
-function openGifts(){
-    hide("bouquetPopup");
-    show("giftPopup");
+function toGifts(){
+    hide("flowerScreen");
+    show("giftScreen");
 }
 
-function openPolaroid(){
-    hide("giftPopup");
-    show("polaroidPopup");
+function openPhotos(){
+    hide("giftScreen");
+    show("photosScreen");
 }
 
 function openSong(){
-    hide("giftPopup");
-    show("songPopup");
+    hide("giftScreen");
+    show("songScreen");
 }
 
 function openLetter(){
-    hide("giftPopup");
-    show("letterPopup");
+    hide("giftScreen");
+    show("letterScreen");
 }
 
-function backToGift(){
+function backToGifts(){
     hideAll();
-    show("giftPopup");
+    show("giftScreen");
 }
 
 function resetAll(){
@@ -67,6 +63,5 @@ function hide(id){
 }
 
 function hideAll(){
-    let popups = document.querySelectorAll(".popup");
-    popups.forEach(p => p.classList.add("hidden"));
+    document.querySelectorAll(".popup").forEach(p=>p.classList.add("hidden"));
 }
