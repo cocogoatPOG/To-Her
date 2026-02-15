@@ -82,23 +82,32 @@ document.querySelectorAll(".popup")
 }
 
 /* FLOATING HEARTS SPAWNER */
-setInterval(()=>{
-const heartsContainer = document.querySelector(".hearts");
+document.getElementById("envelope").onclick = () => {
 
-setInterval(() => {
+    // Play background music
+    const music = document.getElementById("bgMusic");
+    if(music) music.play();
 
-const heart = document.createElement("span");
+    // Envelope click animation
+    const env = document.getElementById("envelope");
+    env.style.transform = "scale(0.85) rotate(-6deg)";
 
-const hearts = ["💚","💜"];
-heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+    // Show first popup
+    show("photoScreen");
 
-heart.style.left = Math.random() * 100 + "vw";
-heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    // Start hearts raining
+    const heartsContainer = document.querySelector(".hearts");
+    setInterval(() => {
+        const heart = document.createElement("span");
+        const hearts = ["💚","💜"];
+        heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
 
-heartsContainer.appendChild(heart);
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
 
-setTimeout(()=>{
-heart.remove();
-},7000);
+        heartsContainer.appendChild(heart);
 
-},300);
+        setTimeout(() => heart.remove(), 7000);
+    }, 300);
+
+};
