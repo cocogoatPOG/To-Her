@@ -161,3 +161,14 @@ margin: 25px auto 0 auto;
     align-items: center;
     gap: 15px;                 /* spacing between envelope and text */
 }
+
+/* ===== CENTER VALENTINE POPUP CONTENT ===== */
+#valScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertical centering */
+    align-items: center;      /* horizontal centering */
+    text-align: center;
+    min-height: 400px;        /* ensures enough space to center content */
+    gap: 20px;                /* space between text and buttons */
+}
