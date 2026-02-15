@@ -1,7 +1,7 @@
 body{
 margin:0;
 font-family:'Poppins', sans-serif;
-background-image:url("backgound.jpg");
+background-image:url("background.jpg"); /* FIXED SPELLING */
 background-size:cover;
 background-position:center;
 }
@@ -28,20 +28,18 @@ transform:scale(1.05);
 }
 
 .popup{
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-
-    background:#fff;
-    padding:40px;          
-    border-radius:25px;
-
-    width:90%;            
-    max-width:500px;
-    min-height:500px;     /* make popups taller */
-    
-    box-shadow:0 0 30px rgba(0,0,0,0.4);
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:#fff;
+padding:40px;
+border-radius:25px;
+width:90%;
+max-width:500px;
+min-height:500px;
+box-shadow:0 0 30px rgba(0,0,0,0.4);
+text-align:center;
 }
 
 .hidden{
@@ -52,15 +50,6 @@ display:none;
 float:right;
 font-size:22px;
 cursor:pointer;
-}
-
-.frame{
-width:250px;
-}
-
-.mainPhoto{
-width:200px;
-margin-top:-200px;
 }
 
 .polaroid{
@@ -132,6 +121,7 @@ from{ transform:rotate(0deg); }
 to{ transform:rotate(360deg); }
 }
 
+/* ENVELOPE OPEN */
 @keyframes envelopeOpen{
 0%{ transform: scale(1) rotate(0deg); }
 40%{ transform: scale(0.9) rotate(-6deg); }
@@ -143,71 +133,32 @@ to{ transform:rotate(360deg); }
 animation: envelopeOpen 0.6s ease forwards;
 }
 
-.frameContainer{
-    position: relative;
-    width: 100%;
-    max-width: 90%;
-    aspect-ratio: 1 / 1;  /* keeps container square */
-}
-
-.frameContainer .frame{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;           /* frame on top */
-}
-
-.frameContainer .mainPhoto{
-    width: 90%;           /* slightly smaller than frame */
-    height: 90%;          /* slightly smaller than frame */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;    /* fills its box proportionally */
-    border-radius: 12px;  /* optional rounded corners */
-    z-index: 1;           /* behind the frame */
-}
-
-/* ===== PHOTO FRAME CENTER HOTFIX ===== */
+/* ===== PHOTO FRAME SYSTEM ===== */
 
 .photoFrameWrap{
-    position: relative;
-    width: 260px;
-    margin: 0 auto;
+position: relative;
+width: 260px;
+margin: 0 auto;
 }
 
-/* Override old frame size */
 .photoFrameWrap .frame{
-    width: 100%;
-    display: block;
+width: 100%;
+display: block;
 }
 
-/* Override old mainPhoto */
 .photoFrameWrap .mainPhoto{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 65%;
-    height: 65%;
-
-    object-fit: cover;
-    border-radius: 12px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 65%;
+height: 65%;
+object-fit: cover;
+border-radius: 12px;
 }
 
-/* ===== CONTINUE BUTTON CENTER ===== */
-
+/* CONTINUE BUTTON CENTER */
 .continueBtn{
-    display: block;
-    margin: 25px auto 0 auto;
-}
-
-/* ===== POPUP CONTENT CENTERING ===== */
-
-.popup{
-    text-align: center;
+display: block;
+margin: 25px auto 0 auto;
 }
