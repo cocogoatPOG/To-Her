@@ -135,11 +135,14 @@ animation: envelopeOpen 0.6s ease forwards;
 
 /* ===== PHOTO FRAME SYSTEM ===== */
 
+/* ===== BABY PHOTO SIZE ===== */
 .babyPhoto{
-display:block;
-width:260px;
-margin:0 auto;
-}
+    display: block;
+    width: 90%;          /* almost fills the popup */
+    max-width: 400px;    /* caps the size on large screens */
+    height: auto;        /* keeps original aspect ratio */
+    margin: 20px auto 0 auto; /* top spacing + centered horizontally */
+  }
 
 /* CONTINUE BUTTON CENTER */
 .continueBtn{
