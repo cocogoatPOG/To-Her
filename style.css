@@ -138,7 +138,7 @@ animation: envelopeOpen 0.6s ease forwards;
 /* ===== BABY PHOTO SIZE ===== */
 .babyPhoto{
     display: block;
-    width: 150%;          /* almost fills the popup */
+    width: 90%;          /* almost fills the popup */
     max-width: 600px;    /* caps the size on large screens */
     height: auto;        /* keeps original aspect ratio */
     margin: 20px auto 0 auto; /* top spacing + centered horizontally */
