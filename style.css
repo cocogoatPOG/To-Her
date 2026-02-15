@@ -171,3 +171,11 @@ margin: 25px auto 0 auto;
     text-align: center;
     gap: 20px; /* space between text and buttons */
 }
+
+/* ===== VALENTINE BUTTONS HORIZONTAL ===== */
+.valButtons {
+    display: flex;           /* puts children in a row */
+    justify-content: center; /* centers them horizontally */
+    gap: 20px;               /* space between buttons */
+    margin-top: 20px;        /* spacing from text above */
+}
