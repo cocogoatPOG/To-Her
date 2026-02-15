@@ -179,3 +179,11 @@ margin: 25px auto 0 auto;
     gap: 20px;               /* space between buttons */
     margin-top: 20px;        /* spacing from text above */
 }
+
+/* ===== POLAROID SIZE ADJUSTMENT ===== */
+.polaroid {
+    width: 120px;      /* bigger than before */
+    max-width: 30%;    /* ensures 3 fit in a row */
+    margin: 8px;       /* keeps spacing consistent */
+    height: auto;      /* maintains aspect ratio */
+}
