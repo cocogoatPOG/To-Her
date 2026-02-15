@@ -83,12 +83,22 @@ document.querySelectorAll(".popup")
 
 /* FLOATING HEARTS SPAWNER */
 setInterval(()=>{
+const heartsContainer = document.querySelector(".hearts");
+
+setInterval(() => {
+
 const heart = document.createElement("span");
-heart.innerHTML = "💚";
-heart.style.left = Math.random()*100 + "vw";
-heart.style.animationDuration = (Math.random()*3+3) + "s";
 
-document.querySelector(".hearts").appendChild(heart);
+const hearts = ["💚","💜"];
+heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
 
-setTimeout(()=> heart.remove(),6000);
-},500);
+heart.style.left = Math.random() * 100 + "vw";
+heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+
+heartsContainer.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+},300);
