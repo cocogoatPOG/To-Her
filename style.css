@@ -182,7 +182,7 @@ margin: 25px auto 0 auto;
 
 /* ===== POLAROID SIZE ADJUSTMENT ===== */
 .polaroid {
-    width: 120px;      /* bigger than before */
+    width: 240px;      /* bigger than before */
     max-width: 30%;    /* ensures 3 fit in a row */
     margin: 8px;       /* keeps spacing consistent */
     height: auto;      /* maintains aspect ratio */
