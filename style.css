@@ -135,26 +135,10 @@ animation: envelopeOpen 0.6s ease forwards;
 
 /* ===== PHOTO FRAME SYSTEM ===== */
 
-.photoFrameWrap{
-position: relative;
-width: 260px;
-margin: 0 auto;
-}
-
-.photoFrameWrap .frame{
-width: 100%;
-display: block;
-}
-
-.photoFrameWrap .mainPhoto{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 65%;
-height: 65%;
-object-fit: cover;
-border-radius: 12px;
+.babyPhoto{
+display:block;
+width:260px;
+margin:0 auto;
 }
 
 /* CONTINUE BUTTON CENTER */
