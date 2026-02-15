@@ -27,12 +27,6 @@ transform-origin: center;
 transform:scale(1.05);
 }
 
-.envelope {
-    border: 2px solid red; /* temporary debug */
-    z-index: 10;
-    position: relative;
-}
-
 .popup{
 position:fixed;
 top:50%;
