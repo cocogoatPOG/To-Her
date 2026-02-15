@@ -1,5 +1,5 @@
 document.getElementById("envelope").onclick = () => {
-
+    
 // Play background music
 const music = document.getElementById("bgMusic");
 if(music){
