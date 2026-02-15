@@ -170,3 +170,44 @@ animation: envelopeOpen 0.6s ease forwards;
     border-radius: 12px;  /* optional rounded corners */
     z-index: 1;           /* behind the frame */
 }
+
+/* ===== PHOTO FRAME CENTER HOTFIX ===== */
+
+.photoFrameWrap{
+    position: relative;
+    width: 260px;
+    margin: 0 auto;
+}
+
+/* Override old frame size */
+.photoFrameWrap .frame{
+    width: 100%;
+    display: block;
+}
+
+/* Override old mainPhoto */
+.photoFrameWrap .mainPhoto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
+    height: 65%;
+
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ===== CONTINUE BUTTON CENTER ===== */
+
+.continueBtn{
+    display: block;
+    margin: 25px auto 0 auto;
+}
+
+/* ===== POPUP CONTENT CENTERING ===== */
+
+.popup{
+    text-align: center;
+}
